@@ -2,7 +2,7 @@ autostart = "true"
 
 configuration = JSON()
 if not boolean("@PLUGIN_LISA_IMAGE_PATH@"):
-	configuration.add("dbpath", "@PLUGIN_LISA_IMAGE_PATH@")
+	configuration.add("dbpath", "@PLUGIN_LISA_IMAGE_PATH@/db")
 	configuration.add("appspath", "@PLUGIN_LISA_IMAGE_PATH@/apps")
 if not boolean("@PLUGIN_LISA_APPDATA_PATH@"):
 	configuration.add("datapath", "@PLUGIN_LISA_APPDATA_PATH@")

@@ -95,7 +95,7 @@ void lisaInternalMakeLogMessage(Args&&... args)
     LOG_INTERNAL(__VA_ARGS__) \
     TRACE_L1("ERROR %s", str.c_str()); \
     } while(0)
-#elif defined(TRACE_GLOBAL)
+#elif defined(TRACE_GLOBAL)  && defined (TRACE_GLOBAL_ENABLED)
 #define INFO(...) do { \
     LOG_INTERNAL(__VA_ARGS__) \
     TRACE_GLOBAL(Trace::Information, ("%s", str.c_str())); \
